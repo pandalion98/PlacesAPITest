@@ -67,16 +67,18 @@ public class DelayAutoCompleteTextView extends android.support.v7.widget.AppComp
         if (mLoadingIndicator != null) {
             mLoadingIndicator.setVisibility(View.VISIBLE);
         }
+
         mHandler.removeMessages(MESSAGE_TEXT_CHANGED);
         mHandler.sendMessageDelayed(mHandler.obtainMessage(MESSAGE_TEXT_CHANGED, text), mAutoCompleteDelay);
     }
 
     @Override
     public void onFilterComplete(int count) {
-        if (mLoadingIndicator != null) {
-            mLoadingIndicator.setVisibility(View.GONE);
-        }
         super.onFilterComplete(count);
+
+        if (mLoadingIndicator != null) {
+            mLoadingIndicator.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
