@@ -39,7 +39,6 @@ public class DelayAutoCompleteTextView extends android.support.v7.widget.AppComp
         }
     };
 
-
     public DelayAutoCompleteTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -57,10 +56,10 @@ public class DelayAutoCompleteTextView extends android.support.v7.widget.AppComp
     /**
      * Sets how many milliseconds before view starts autocompleting
      *
-     * @param autoCompleteDelay Autocomplete delay in ms
+     * @param autoCompleteDelayMs Autocomplete delay in ms
      */
-    public void setAutoCompleteDelay(int autoCompleteDelay) {
-        mAutoCompleteDelay = autoCompleteDelay;
+    public void setAutoCompleteDelay(int autoCompleteDelayMs) {
+        mAutoCompleteDelay = autoCompleteDelayMs;
     }
 
     @Override
