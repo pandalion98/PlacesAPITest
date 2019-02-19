@@ -108,7 +108,7 @@ public class PlacesAutoCompleteAdapter
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 // Check if we have results, then act appropriately
                 if (results != null && results.values != null) {
-                    mResultList = (List<AutocompletePrediction>) results.values;
+                    mResultList = new ArrayList<>((List<AutocompletePrediction>) results.values);
                     notifyDataSetChanged();
                 } else {
                     mResultList.clear();
